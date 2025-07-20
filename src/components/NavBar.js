@@ -49,7 +49,7 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
              <div className="social-icon" style={{ display: "flex", gap: "10px" }}>
-                  <a href="https://github.com/harishadithyan1" target="_blank" rel="noopener noreferrer">
+                  <a href="www.linkedin.com/in/harish-adithyan-88326a2ba" target="_blank" rel="noopener noreferrer">
                     <img src={navIcon1} alt="LinkedIn" />
                   </a>
                   <a href="https://github.com/harishadithyan1" target="_blank" rel="noopener noreferrer">
