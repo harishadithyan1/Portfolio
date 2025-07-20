@@ -41,17 +41,7 @@ export const Projects = () => {
       title: "Todo App",
       description: "Django Web",
       vidUrl: "https://res.cloudinary.com/dl2hcx3sr/video/upload/v1753010569/WhatsApp_Video_2025-07-19_at_16.47.47_97e366c0_zvpsad.mp4",
-    },
-    {
-      title: "Instagram Clone",
-      description: "React + Django + Channels",
-      vidUrl: "https://yourdomain.com/videos/insta.mp4",
-    },
-    {
-      title: "Citizen Help Desk",
-      description: "Full-stack web app",
-      vidUrl: "https://res.cloudinary.com/dl2hcx3sr/video/upload/v1753010595/WhatsApp_Video_2025-07-19_at_16.48.28_82da63b8_rhoioz.mp4",
-    },
+    }
   ];
 
   const certifications = [
@@ -121,7 +111,7 @@ export const Projects = () => {
     {
       title: "IoT Dashboard",
       github: "https://github.com/harishadithyanm/iot-dashboard",
-      appLink: "https://iot-dashboard-client.netlify.app/",
+      appLink: "https://drive.google.com/file/d/1kvXuwGPo1tG3OPGbRcehTL3tQGZRV7AN/view?usp=drive_link",
     },
   ];
 
@@ -143,13 +133,13 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Videos</Nav.Link>
+                        <Nav.Link eventKey="first">Demo</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Certifications</Nav.Link>
+                        <Nav.Link eventKey="second">Certificates</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Github & Links</Nav.Link>
+                        <Nav.Link eventKey="third">Github</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -173,22 +163,50 @@ export const Projects = () => {
                         <Row>
                           {projectLinks.map((proj, index) => (
                             <Col key={index} md={6} lg={4} className="mb-4">
-                              <Card style={{ minHeight: "250px" }}>
-                                <Card.Body>
-                                  <Card.Title>{proj.title}</Card.Title>
-                                  <Card.Text>
-                                    <strong>GitHub:</strong>{" "}
-                                    <a href={proj.github} target="_blank" rel="noopener noreferrer">
-                                      Repo Link
-                                    </a>
-                                    <br />
-                                    <strong>Live App:</strong>{" "}
-                                    <a href={proj.appLink} target="_blank" rel="noopener noreferrer">
-                                      View App
-                                    </a>
-                                  </Card.Text>
-                                </Card.Body>
-                              </Card>
+                              <Card
+  style={{
+    background: "rgba(30, 30, 30, 0.6)", // greyish-transparent
+    border: "1px solid rgba(255, 255, 255, 0.1)",
+    borderRadius: "20px",
+    padding: "20px",
+    color: "#f1f1f1",
+    backdropFilter: "blur(10px)",
+    WebkitBackdropFilter: "blur(10px)",
+    minHeight: "180px",
+    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4)",
+    transition: "transform 0.3s ease",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  <Card.Body>
+    <Card.Title style={{ fontSize: "1.1rem", fontWeight: "600" }}>
+      {proj.title}
+    </Card.Title>
+    <Card.Text style={{ fontSize: "0.9rem" }}>
+      <strong>GitHub:</strong>{" "}
+      <a
+        href={proj.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#e50914", textDecoration: "none" }}
+      >
+        Repo Link
+      </a>
+      <br />
+      <strong>Live App:</strong>{" "}
+      <a
+        href={proj.appLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#e50914", textDecoration: "none" }}
+      >
+        View App
+      </a>
+    </Card.Text>
+  </Card.Body>
+</Card>
+
                             </Col>
                           ))}
                         </Row>

@@ -58,7 +58,17 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Harish adithyan`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "App developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Hi, I'm Harish Adithyan, a passionate Web and App Developer with a strong foundation in full-stack development. I specialize in building responsive, user-friendly interfaces and real-time applications. With hands-on experience in React, Django, and IoT integrations, I love turning ideas into powerful digital solutions. I'm always eager to learn and collaborate on innovative tech projects.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                 <button
+  onClick={() => {
+    const section = document.querySelector('#connect');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Let’s Connect <ArrowRightCircle size={25} />
+</button>
+
               </div>}
             </TrackVisibility>
           </Col>
