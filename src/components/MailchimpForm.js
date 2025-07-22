@@ -21,7 +21,7 @@ export const MailchimpForm = () => {
         </p>
         <a
           href="/Harish_Resume.pdf"
-          download="Harish_Adithyan_Resume.pdf"
+          download="Harish_adithyan.pdf"
           style={{
             padding: "12px 24px",
             backgroundColor: "#007bff",

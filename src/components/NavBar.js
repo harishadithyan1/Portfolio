@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.png';
+import logo from '../assets/img/log.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/github.svg';
+import navIcon2 from '../assets/img/git.svg';
+import docker from '../assets/img/Docker.svg';
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -36,7 +37,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" style={{ height: "170px", width: "auto" }} />
+            <img src={logo} alt="Logo" style={{ height: "50px", width: "auto" }} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -49,11 +50,14 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
              <div className="social-icon" style={{ display: "flex", gap: "10px" }}>
-                  <a href="www.linkedin.com/in/harish-adithyan-88326a2ba" target="_blank" rel="noopener noreferrer">
+                  <a href="https://linkedin.com/in/harish-adithyan-88326a2ba" target="_blank" rel="noopener noreferrer">
                     <img src={navIcon1} alt="LinkedIn" />
                   </a>
                   <a href="https://github.com/harishadithyan1" target="_blank" rel="noopener noreferrer">
                     <img src={navIcon2} alt="GitHub" />
+                  </a>
+                  <a href="https://hub.docker.com/repositories/harishadithyanm" target="_blank" rel="noopener noreferrer">
+                    <img src={docker} alt="Docker" />
                   </a>
               </div>
 

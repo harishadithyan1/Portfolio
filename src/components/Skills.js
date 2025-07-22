@@ -1,6 +1,5 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
 import colorSharp from "../assets/img/color-sharp.png";
 import arduino from "../assets/img/arduino.png";
 import bootstrap from "../assets/img/bootstrap.png";
@@ -49,7 +48,7 @@ export const Skills = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="skill-bx wow zoomIn">
+            <div className="skill-bx wow zoomIn px-2 px-md-5">
               <h2 style={{ color: "#fff" }}>Skills</h2>
               <p style={{ color: "#fff" }}>
                 Here's a snapshot of my technical strengths and development expertise across full-stack, mobile, real-time apps, and IoT systems.

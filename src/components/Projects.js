@@ -97,21 +97,25 @@ export const Projects = () => {
       title: "Thoughtify Blog",
       github: "https://github.com/harishadithyan1/Thoughtifydaily.git",
       appLink: "https://thoughtifydaily.onrender.com/",
+      docker:"https://hub.docker.com/repository/docker/harishadithyanm/thoughtify-blog/general",
     },
     {
       title: "Todo",
       github: "https://github.com/harishadithyan1/Todo-app.git",
       appLink: "https://todo-app-32un.onrender.com/",
+      docker:"https://hub.docker.com/repository/docker/harishadithyanm/todo/general",
     },
     {
       title: "Weather",
       github: "https://github.com/harishadithyan1/Weather.git",
       appLink: "https://weather-gnw2.onrender.com/",
+      docker:"",
     },
     {
       title: "IoT Dashboard",
       github: "https://github.com/harishadithyanm/iot-dashboard",
       appLink: "https://drive.google.com/file/d/1kvXuwGPo1tG3OPGbRcehTL3tQGZRV7AN/view?usp=drive_link",
+      docker:"https://hub.docker.com/repository/docker/harishadithyanm/weather/general",
     },
   ];
 
@@ -131,17 +135,24 @@ export const Projects = () => {
                   </p>
 
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                      <Nav.Item>
-                        <Nav.Link eventKey="first">Demo</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="second">Certificates</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="third">Github</Nav.Link>
-                      </Nav.Item>
-                    </Nav>
+                    <div className="nav-scroll-wrapper">
+    <Nav
+      variant="pills"
+      className="nav-pills mb-5 justify-content-start align-items-center flex-nowrap"
+      id="pills-tab"
+    >
+      <Nav.Item>
+        <Nav.Link eventKey="first">Demo</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="second">Certs</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="third">Links</Nav.Link>
+      </Nav.Item>
+    </Nav>
+  </div>
+
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
                         <Row>
@@ -189,9 +200,19 @@ export const Projects = () => {
         href={proj.github}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ color: "#e50914", textDecoration: "none" }}
+        style={{ color: "#65e509ff", textDecoration: "none" }}
       >
         Repo Link
+      </a>
+      <br />
+      <strong>Docker link:</strong>{" "}
+      <a
+        href={proj.docker}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#65e509ff", textDecoration: "none" }}
+      >
+        image link
       </a>
       <br />
       <strong>Live App:</strong>{" "}
@@ -199,7 +220,7 @@ export const Projects = () => {
         href={proj.appLink}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ color: "#e50914", textDecoration: "none" }}
+        style={{ color: "#65e509ff", textDecoration: "none" }}
       >
         View App
       </a>

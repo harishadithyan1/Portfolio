@@ -37,10 +37,10 @@ export const Contact = () => {
     };
 
     emailjs.send(
-      'service_3wd39g8',          // ✅ Your EmailJS service ID
-      'template_mekw4ic',         // 🔁 Replace with your EmailJS template ID
+      'service_3wd39g8',         
+      'template_mekw4ic',        
       templateParams,
-      'hBy70hHRO172BNTWw'      // 🔁 Replace with your EmailJS public key
+      'hBy70hHRO172BNTWw'      
     ).then((result) => {
       console.log(result.text);
       setStatus({ success: true, message: 'Message sent successfully!' });
